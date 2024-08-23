@@ -1,0 +1,493 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .toggle-menu {
+        display: none;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* Mobile/Tablet */
+@media screen and (max-width: 991.98px) {
+    /* Common */
+    .section-heading {
+        font-size: 3.2rem;
+    }
+
+    .section-sub-title {
+        margin-bottom: 14px;
+        font-size: 1.5rem;
+    }
+
+    /* Header */
+    .navbar {
+        position: relative;
+    }
+
+    .logo-header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    .navbar__list {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: block;
+        width: 24px;
+        color: red;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 2;
+        padding: 60px;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+    }
+
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .menu-drawer__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-mobile__list {
+        margin-top: 32px;
+    }
+
+    .navbar-mobile__link {
+        display: block;
+        padding: 14px 0;
+        color: var(--color-deep-dark);
+        font-weight: 500;
+    }
+
+    .separate {
+        border-top: 1px solid #ccc;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 55px;
+    }
+
+    .hero-content {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 32px;
+        margin: 0 auto;
+    }
+
+    .hero-content__desc {
+        width: 80%;
+    }
+
+    .hero-info {
+        display: none;
+    }
+
+    /* Trade */
+    .trade {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 28px;
+        padding: 50px 0 20px;
+    }
+
+    /* Courses */
+    .courses {
+        margin-top: 22px;
+        padding: 0;
+    }
+
+    .courses-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses-col__title {
+        width: 67%;
+    }
+
+    /* About */
+    .about {
+        margin-top: 24px;
+    }
+
+    .about-inner {
+        padding: 36px 0;
+    }
+
+    .about-row {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 32px;
+    }
+
+    .about-col__desc {
+        width: 60%;
+    }
+
+    /* Blog */
+    .blog {
+        padding: 0;
+    }
+
+    .blog-container {
+        margin-top: 36px;
+    }
+
+    .blog-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .blog-col {
+        padding: 5px;
+        border: 1px solid rgba(235, 235, 235, 0.4);
+        border-radius: 10px;
+    }
+
+    .blog-col__img {
+        width: 100%;
+    }
+
+    .blog__btn {
+        margin-top: 42px;
+    }
+
+    /* Event */
+    .event-content__desc {
+        width: 60%;
+    }
+
+    .event__decor {
+        display: none;
+    }
+
+    .event-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 32px;
+    }
+
+    .event__decor {
+        margin-top: 36px;
+    }
+
+    /* Category */
+    .category {
+        padding-bottom: 46px;
+    }
+
+    .category-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Feedback */
+
+    .feedback-wraps {
+        flex-direction: column;
+        gap: 100px;
+        margin-top: 60px;
+    }
+
+    .feedback-info {
+        width: 100%;
+    }
+
+    .feedback-info__imgs {
+        width: 100%;
+    }
+
+    .feedback-content {
+        width: 100%;
+    }
+
+    .feedback-content__quote {
+        width: 80%;
+    }
+
+    .feedback-content__wraps {
+        margin-top: 32px;
+    }
+
+    .feedback-containers {
+        flex-wrap: wrap;
+        gap: 46px;
+        margin-top: 100px;
+    }
+
+    /* Contact */
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-content__desc {
+        text-align: center;
+        width: 70%;
+    }
+
+    .contact-wrap {
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .contact-wrap__icon {
+        display: none;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 0 12px;
+    }
+
+    .footer-bot {
+        gap: 50px;
+        margin-top: 64px;
+    }
+
+    .footer-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    /* Hero */
+    .hero-content {
+        width: 70%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .section-sub-title {
+        margin-bottom: 12px;
+        font-size: 1.4rem;
+    }
+
+    .menu-drawer {
+        inset: 0 25% 0 0;
+        padding: 40px;
+    }
+
+    .navbar-action {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 52px 0 22px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    .hero-content__title {
+        font-size: 5.2rem;
+    }
+
+    .hero-content__desc {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    .hero-action {
+        gap: 10px;
+    }
+
+    .hero-action__btn {
+        min-width: 175px;
+        gap: 5px;
+        font-size: 1.4rem;
+    }
+
+    /* Trade */
+    .trade {
+        padding: 30px 0 40px;
+        gap: 30px 74px;
+    }
+
+    /* Courses */
+    .courses {
+        margin-top: 22px;
+    }
+
+    .courses-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 32px;
+    }
+
+    .courses-action__btn {
+        margin-top: 22px;
+    }
+
+    /* About */
+    .about-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blog */
+    .blog {
+        align-items: flex-start;
+    }
+
+    .blog-container {
+        margin-top: 22px;
+    }
+
+    .blog-list {
+        gap: 15px;
+    }
+
+    .blog-list__item {
+        padding: 3px 18px;
+        font-size: 1.6rem;
+    }
+
+    .blog-rows {
+        margin-top: 28px;
+    }
+
+    .blog-row {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-col__title {
+        width: 80%;
+    }
+
+    .blog__btn {
+        margin-top: 26px;
+    }
+
+    /* Event */
+    .event-content__desc {
+        width: 100%;
+    }
+
+    .event-row {
+        margin-top: 22px;
+    }
+
+    .event-col {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .event-col__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .event__btn {
+        margin-top: 32px;
+    }
+
+    /* Category */
+    .category-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Feedback */
+    .feedback {
+        padding: 0;
+    }
+
+    .feedback-wraps {
+        margin-top: 32px;
+        gap: 56px;
+    }
+
+    .feedback-info__icon--top,
+    .feedback-info__icon--bottom,
+    .feedback-info__icon--wave {
+        display: none;
+    }
+
+    .feedback-content__quote {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    .feedback-content__wraps {
+        margin-top: 26px;
+    }
+
+    .feedback-containers {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 46px;
+        margin-top: 50px;
+    }
+
+    .feedback-info__btn--left {
+        left: -20px;
+    }
+
+    .feedback-info__btn--right {
+        right: -20px;
+    }
+
+    /* Contact */
+    .contact-content__desc {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-bot {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-sub__icon {
+        display: none;
+    }
+
+    .footer-sub__desc {
+        text-align: center;
+    }
+}
